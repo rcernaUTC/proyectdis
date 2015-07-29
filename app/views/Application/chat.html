@@ -1,0 +1,38 @@
+#{extends 'main.html' /}
+#{set title:'Sign in' /}
+
+<div id="home">
+
+    <h2>Chat para consultas en Linea</h2>
+
+    <div id="signin">
+        #{form @enterDemo()}
+            #{if flash.error}
+                <p class="error">
+                    ${flash.error}
+                </p>
+            #{/if}
+            <p>
+                <label for="nick">USUARIO:</label>
+                
+                 <select name="user">
+                    <option id="user" value="Doctor">Doctor</option>
+                    <option id="user" value="Paciente">Paciente</option>
+                   </select>
+            </p>
+            <p>
+                <label for="nick">HORARIOS:</label>
+                <select name="demo">
+                   <option value="refresh">--7:00am & 3:00pm--</option>
+                   <option value="refresh">--3:00pm & 11:00pm--</option>
+                   <option value="refresh">--11:00pm & 7:00am--</option>
+                   </select>
+            </p>
+            <p>
+                <label></label>
+                <input type="submit" id="enter" value="Comenzar Chat">
+            </p>
+        #{/form}
+    </div>
+
+</div>
