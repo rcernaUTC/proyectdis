@@ -1,0 +1,236 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Terminal Dosis', Arial, sans-serif;
+}
+
+header{
+	background-color: rgb(202,62,57);
+	width: 100%;
+	height: 180px;
+}
+
+#logo img{
+	margin-top: 10px;
+	float: left;
+	width: 160px;
+	height: 160px;
+	margin-left: 20px;
+	border-radius: 80px;
+}
+
+#titulo{
+	color: rgb(42,52,61);
+	font-size: 30px;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 70px;
+}
+
+nav {
+	margin-top: 40px;
+	text-align: center;
+	padding: 10px;
+}
+
+nav a{
+	font-size: 22px;
+	display: inline-block;
+	color: #FCFCFC;
+	background-color: #244B68;
+	width: 150px;
+	height: 50px;
+	padding: 14px;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+nav a:hover{
+	color: rgb(202,62,57);
+	background-color: #FEBB4F;
+}
+
+#contenedor{
+	width: 100%;
+	height: 550px;
+}
+
+/*
+	==============================
+		Parte 1
+	==============================
+ */
+
+#parte1{
+	background-color: #FCFCFC;
+	float: left;
+	width: 20%;
+	height: 550px;
+}
+
+#discapacitados{
+	color: rgb(202,62,57);
+	font-size: 24px;
+	text-align: center;
+}
+
+/*
+ 	=============================
+		Imagenes Discapacitados
+ 	=============================
+ */
+#imgDiscapacitados{
+	margin-left: 10px;
+	border:outset #244B68;
+	padding: 10px;
+	height: 410px;
+}
+
+#imgDiscapacitados img{
+	width: 50px;
+	height: auto;
+	text-align: center;
+	margin-left: 90px;
+}
+
+#opciones{
+	background-color: #FCFCFC;
+	height: 280px;
+	text-align: center;
+}
+
+#opciones a{
+	display: inline-block;
+	background-color: rgb(36,75,104);
+	color: #FCFCFC;
+	width: 260px;
+	height: 60px;
+	padding: 20px;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+#opciones a:hover{
+	background-color: rgb(202,62,57);
+}
+
+/*
+	==============================
+		Parte 2 
+	==============================
+ */
+
+#parte2{
+	text-align: center;
+	background-color: rgb(252,252,252);
+	float: left;
+	width: 50%;
+	height: 550px;
+}
+
+#bienvenida{
+	color: rgb(202,62,57);
+	font-size: 24px;
+	text-align: center;
+}
+
+#imgBienvenida img{
+	width: 550px;
+	height: 300px;
+}
+
+#sintomas{
+	margin-left: 42px;
+}
+#sintomas table{
+	text-align: center;
+	color: rgb(36,75,104);
+	font-size: 18px;
+}
+
+#sintomas table td input {
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	width: 80px;
+}
+
+#sintomas table, td, td {
+	font-size: 14px;
+	text-align: center;
+	border: 2px solid #39424D;
+	text-decoration: none;
+	border-collapse: collapse;
+}
+
+#sintomas table td input{
+	width: 190px;
+	height: 80px;
+}
+/*
+	==============================
+		Tabla 2
+	==============================
+ */
+
+#sintomas2{
+	margin-left: 8px;
+}
+
+#sintomas2 table{
+	text-align: center;
+	color: rgb(36,75,104);
+	font-size: 18px;
+}
+
+#sintomas2 table td input {
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	width: 90px;
+}
+
+#sintomas2 table, td, td {
+	font-size: 14px;
+	text-align: center;
+	border: 2px solid #39424D;
+	text-decoration: none;
+	border-collapse: collapse;
+}
+
+#sintomas2 table td input{
+	width: 120px;
+	height: 72px;
+}
+
+/*
+	==============================
+		Parte3
+	==============================
+ */
+#parte3{
+	text-align: center;
+	width: 30%;
+	float: right;
+}
+
+footer{
+	text-align: center;
+	font-size: 24px;
+	background-color: rgb(36,75,104);
+	color: #FCFCFC;
+	float: right;
+	width: 100%;
+	height: 180px;
+}
+
+footer img{
+	margin-top: -40px;
+	width: 80px;
+	height: auto;
+}
+

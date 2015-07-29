@@ -5,6 +5,12 @@
 # Home page
 GET     /                                       Application.index
 
+# Refresh demo
+GET     /refresh                                Refresh.chat
+GET     /refresh/room                           Refresh.room
+POST    /refresh/room                           Refresh.say
+GET     /refresh/room/leave                     Refresh.leave   
+ 
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
@@ -17,5 +23,9 @@ GET     /secion/                                Registros.secion
 GET 	/extraer/								Registros.extraer
 GET		/historial/								Registros.historial
 GET     /paciente/								Registros.paciente
+<<<<<<< HEAD
 * 		 /Perfil                				Usuarios.index	
 *        /Inicio							    Application.index
+=======
+GET     /chat/                                    Application.chat
+>>>>>>> origin/master
