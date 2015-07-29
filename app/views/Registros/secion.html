@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Page 1</title>
+  <script type="text/javascript" src="/public/javascripts/jquery-1.6.4.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/public/thumbelina/thumbelina.css" />
+  <script type="text/javascript" src="/public/thumbelina/thumbelina.js"></script>
+
+      <!-- Create sliders. -->
+        <script type="text/javascript">
+            $(function(){
+            
+                $('#slider3').Thumbelina({
+                    orientation:'vertical',         // Use vertical mode (default horizontal).
+                    $bwdBut:$('#slider3 .top'),     // Selector to top button.
+                    $fwdBut:$('#slider3 .bottom')   // Selector to bottom button.
+                });
+              
+            })
+            
+        
+        </script>    
+
+        <style type="text/css">
+            /* Some styles for the containers */
+                  #slider3 {
+                position:relative;
+                margin-top:40px;
+                width:93px;
+                height:256px;
+                border-left:1px solid #aaa;
+                border-right:1px solid #aaa;
+                margin-bottom:40px;
+                text-align: center;
+                
+            }
+        </style>
+<!-- 
+=================================
+	ESTILOS DE PAGE 1
+================================= 
+-->
+<style type="text/css">
+	
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: 'Terminal Dosis', Arial, sans-serif;
+	}
+	
+	/* Cabezera */
+	header{
+		float: right;
+		background-color: rgb(202,62,57);
+		width: 100%;
+		height: 150px;
+	}
+
+	#logo img{
+		margin-top: 10px;
+		float: left;
+		width: 135px;
+		height: 135px;
+		margin-left: 20px;
+		border-radius: 80px;
+	}
+
+	#titulo{
+		margin-top: -5px;
+		color: #FCFCFC;
+		font-size: 25px;
+		text-align: center;
+		padding: 5px;
+		box-sizing: border-box;
+		width: 100%;
+		height: 70px;
+	}
+
+	/*Botones de navegacion*/
+	nav {
+		margin-top: 20px;
+		text-align: center;
+		padding: 10px;
+	}
+
+	nav a{
+		font-size: 16px;
+		display: inline-block;
+		color: #FCFCFC;
+		background-color: #244B68;
+		width: 150px;
+		height: 40px;
+		padding: 11px;
+		box-sizing: border-box;
+		text-decoration: none;
+		border-radius: 10px;
+	}
+
+	nav a:hover{
+		color: #fcfcfc;
+		background: #1dabb8;
+	}
+
+	#contenedor{
+		width: 100%;
+		height: 550px;
+	}
+
+	/*
+		==============================
+			Parte 1
+		==============================
+	 */
+
+	#parte1{
+		background-color: #FCFCFC;
+		float: left;
+		width: 20%;
+		height: 550px;
+	}
+
+	#discapacitados{
+		color: rgb(202,62,57);
+		font-size: 24px;
+		text-align: center;
+	}
+
+	/*
+	 	=============================
+			Imagenes Discapacitados
+	 	=============================
+	 */
+	#imgDiscapacitados{
+		width: 80%;
+		border:outset #244B68;
+		padding: 10px;
+		height: 410px;
+	}
+
+	#imgDiscapacitados img{
+		width: 50px;
+		height: auto;
+		text-align: center;
+		margin-left: 90px;
+	}
+
+	#opciones{
+		background-color: #FCFCFC;
+		height: 280px;
+		text-align: center;
+	}
+
+	#opciones a{
+		display: inline-block;
+		background-color: rgb(36,75,104);
+		color: #FCFCFC;
+		width: 260px;
+		height: 60px;
+		padding: 20px;
+		box-sizing: border-box;
+		text-decoration: none;
+	}
+
+	#opciones a:hover{
+		background-color: rgb(202,62,57);
+	}
+
+	/*
+		==============================
+			Parte 2 
+		==============================
+	 */
+
+	#parte2{
+		text-align: center;
+		background-color: rgb(252,252,252);
+		float: left;
+		width: 50%;
+		height: 550px;
+	}
+
+	#bienvenida{
+		color: rgb(202,62,57);
+		font-size: 24px;
+		text-align: center;
+	}
+
+	#imgBienvenida img{
+		width: 90%;
+		height: 300px;
+	}
+
+	#sintomas{
+		width: 100%;
+		height:auto;
+	}
+
+	/* Tabla 1 */
+
+	#sintomas table{
+		width: 100%;
+		text-align: center;
+		color: rgb(36,75,104);
+		font-size: 18px;
+	}
+
+	#sintomas table td input {
+		font-size: 12px;
+		text-align: center;
+		text-decoration: none;
+		width: 100%;
+		height: 80px;
+	}
+
+	#sintomas table, td, td {
+		font-size: 14px;
+		text-align: center;
+		border: 2px solid #39424D;
+		text-decoration: none;
+		border-collapse: collapse;
+	}
+
+	/*
+		==============================
+			Tabla 2
+		==============================
+	 */
+
+	#sintomas2 table{
+		float: right;
+		text-align: center;
+		color: rgb(36,75,104);
+		font-size: 18px;
+	}
+
+	#sintomas2 table td input {
+		font-size: 12px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	#sintomas2 table, td, td {
+		font-size: 14px;
+		text-align: center;
+		border: 2px solid #39424D;
+		text-decoration: none;
+		border-collapse: collapse;
+	}
+
+	#sintomas2 table td input{
+		width: 120px;
+		height: 75px;
+	}
+
+	/*
+		==============================
+			Parte 3 Datos
+		==============================
+	 */
+	#parte3{
+		text-align: center;
+		width: 30%;
+		height: 550px;
+		float: right;
+	}
+
+	textarea{
+		width: 90%;
+	}
+
+	footer{
+		text-align: center;
+		font-size: 24px;
+		background-color: rgb(36,75,104);
+		color: #FCFCFC;
+		float: right;
+		width: 100%;
+		height: 180px;
+	}
+
+	footer img{
+		margin-top: -40px;
+		width: 80px;
+		height: auto;
+	}
+
+</style>
+<!-- 
+=================================
+	FIN DE ESTILOS PAGE 1
+================================= 
+-->
+
+
+</head>
+
+<body>
+<!-- 
+=================================
+	Encabezado
+================================= 
+-->
+<header>
+	<div id="logo">
+		<img src="/public/images/utc.jpg">
+	</div>
+
+	<div id="titulo">
+		<h2>UNIVERSIDAD TÉCNICA DE COTOPAXI</h1>
+		
+
+
+	</div>
+
+	<!--Menu de navegacion-->
+	<nav>
+		<a href="/secion/">Inicio</a>
+		<a href="/historial/">Historial</a>
+		<a href="/paciente/">Paciente</a>
+		<a href="/extraer/">Usuarios</a>
+		<a href="/observacion/">Observación</a>
+		<a href="/chat/">Chat</a>
+	</nav>
+
+</header>
+
+<!-- 
+=================================
+	Contenedor
+================================= 
+-->
+<div id="contenedor">
+	<!--Parte Discapacitados-->
+	<div id="parte1">
+	<br>
+		
+		<div id="discapacitados">Imagenes</div>
+		<br>
+		<div  id="slider3">
+            <div class="thumbelina-but vert top">&#708;</div>
+            <ul>
+                
+              <li><img src="/public/slider/image1.jpg"></li>
+                <li><img src="/public/slider/image2.jpg"></li>
+                <li><img src="/public/slider/image3.jpg"></li>
+                <li><img src="/public/slider/image4.jpg"></li>
+                <li><img src="/public/slider/image5.jpg"></li>
+                <li><img src="/public/slider/image6.jpg"></li>
+            </ul>
+            <div class="thumbelina-but vert bottom">&#709;</div>
+        </div>
+	
+	</div>
+	<div>
+
+hola
+	#{list doctores,as:'doc'}
+	<td>${doc.email}</td>
+	
+	#{/list}
+</div>
+	<!--Parte Bienvenida-->
+	<div id="parte2">
+		<br>
+		<div id="bienvenida">
+			Paciente
+		</div>
+
+		<br>
+		<!--Imagen Bienvenida-->
+		<div id="imgBienvenida">
+			<img src="/public/images/hol.jpg">
+			
+		</div>
+		<!--Seccion 2 Sintomas-->
+		<div id="sintomas">
+			<br>
+			<table border="1">
+				<tr>
+					<td>Síntomas</td>
+					<td>Recomendaciones</td>
+					<td>Medicinas</td>				
+				</tr>
+
+				<tr>
+					<!--<td><input type="text" id="inpSintomas" value=""></td>
+					<td><input type="text" id="inpRecomendaciones" value=""></td>
+					<td><input type="text" id="inpMedicinas" value=""></td> -->
+
+					<td><textarea cols="24" rows="5"></textarea></td>
+					<td><textarea cols="24" rows="5"></textarea></td>
+					<td><textarea cols="24" rows="5"></textarea></td>
+				</tr>
+			</table>			
+		</div>
+	</div>
+
+	<!--Seccion 3 Datos-->
+	<div id="parte3">
+		<br>
+		<div id="bienvenida">
+			Datos
+		</div>
+		
+		<!--Preguntas-->
+		<div id="sintomas2">
+			<br>
+			<table border="1">
+				<tr>
+					<td>Síntomas</td>
+					<td>Recomendaciones</td>
+					<td>Medicinas</td>				
+				</tr>
+
+				<tr>
+					<td><input type="text" id="inpSintomas" value=""></td>
+					<td><input type="text" id="inpRecomendaciones" value=""></td>
+					<td><input type="text" id="inpMedicinas" value=""></td>
+				</tr>
+
+				<tr>
+					<td><input type="text" id="inpSintomas" value=""></td>
+					<td><input type="text" id="inpRecomendaciones" value=""></td>
+					<td><input type="text" id="inpMedicinas" value=""></td>
+				</tr>
+
+				<tr>
+					<td><input type="text" id="inpSintomas" value=""></td>
+					<td><input type="text" id="inpRecomendaciones" value=""></td>
+					<td><input type="text" id="inpMedicinas" value=""></td>
+				</tr>
+
+				<tr>
+					<td><input type="text" id="inpSintomas" value=""></td>
+					<td><input type="text" id="inpRecomendaciones" value=""></td>
+					<td><input type="text" id="inpMedicinas" value=""></td>
+				</tr>
+
+				<tr>
+					<td><input type="text" id="inpSintomas" value=""></td>
+					<td><input type="text" id="inpRecomendaciones" value=""></td>
+					<td><input type="text" id="inpMedicinas" value=""></td>
+				
+				</tr>
+			</table>			
+		</div>		
+	</div>	
+</div>
+	
+
+<!-- 
+=================================
+	Pie de Página
+================================= 
+-->
+<footer>
+	<h6>Derechos reservados 2015</h6>
+	<br>
+	<img src="/public/images/Facebook-icon.png">
+	<img src="/public/images/Twitter-icon.png">
+	<img src="/public/images/Youtube-2-icon.png">
+	<img src="/public/images/Googleplus-icon.png">
+
+</footer>
+	
+</body>
+</html>
