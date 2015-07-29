@@ -1,0 +1,52 @@
+#{extends 'main.html' /}
+
+<body>
+<div id="contenedor">
+
+		<!-- 
+	==============================================================
+		FORMULARIO INICIO
+	==============================================================
+ -->
+		<div id="inicio">
+			
+		</div>
+		
+		
+		
+<div id="inicio2">
+	<div class="registro"> 
+	<h1 class="login-title">EDITAR SUS DATOS</h1>
+		
+		<form  name="formLogin" action="@{Registros.main()}" method = "post">
+		<center><table>
+			<tr>
+				<td><label>NOMBRES:</label></td>
+				<td><input name="UserName" type="text" id="user" class="login-input2"/></td>
+			</tr>
+
+			
+					<td><label>APELLIDOS:</label></td>
+					<td><input name="Correo" type="text" id="password" class="login-input2" /><br></td>
+			</tr> 
+			<tr>
+					<td><label>DIRECCION:</label></td>
+					<td><input name="Password" type="password" id="password" class="login-input2" /><br></td>
+					
+					<td><label>EMAIL:</label></td>
+					<td><input name="Email" type="text" id="password" class="login-input2" /><br></td>
+			</tr> 
+			<tr>
+					<td colspan="2"><input type="submit" id="index" value="ACTUALIZAR" class="login-button"  /></td>
+			</tr> 
+
+		</table>
+		</center>
+		</form>
+ 	</div> 
+ 
+ 			
+ </div>				
+</div>
+
+</body>

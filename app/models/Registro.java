@@ -14,12 +14,12 @@ import play.db.jpa.Model;
 
 @Entity
 public class Registro extends Model{
-	private long code;
-    private String Nombre;
-    private String Apellido;
-    private String Direccion;
-    private String Email;
-    private String Clave;
+	public long code;
+    public String Nombre;
+    public String Apellido;
+    public String Direccion;
+    public String Email;
+    public String Clave;
 	
 
 	public Registro(long code, String Nombre,String Apellido,String Direccion,String Email,String Clave) {
@@ -36,6 +36,9 @@ public class Registro extends Model{
 	public Registro(long code2, String nombre2) {
 		// TODO Auto-generated constructor stub
 	}
+
+
+	
 
 
 

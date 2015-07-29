@@ -284,23 +284,43 @@ footer img {
 		<div id="registro">
 			<div class="registro"> 
 			<h1 class="login-title">Registro</h1>
-			#{form id:'itemForm',action:@Registros.main(),
-			method:'POST',enctype:'multipart/form-data'} <label>Nombre *</label>
-			#{field 'inpNombre'} <input id="inpNombre" type="text"
-				name="${field.name}" class="login-input2" placeholder="" autofocus
-				required> #{/field}
-				
-				 <label>Apellido *</label> #{field 'inpApellido'}<input
-				id="inpApellido" type="text" name="${field.name}"  class="login-input2" placeholder=""
-				autofocus required>#{/field} <label>Dirección *</label> #{field 'inpDireccion'}<input
-				id="inpDireccion" type="text" name="${field.name}" class="login-input2" placeholder=""
-				autofocus required>#{/field}  <label>Email *</label>#{field 'inpEmail'} <input
-				id="inpEmail" type="email" name="${field.name}"  class="login-input2" placeholder=""
-				autofocus required> #{/field} <label>Contraseña *</label> #{field 'inpContraseña'} <input
-				id="inpContraseña" type="password" name="${field.name}"  class="login-input2"
-				placeholder="" autofocus required>#{/field} <input id="registrar"
-				type="submit" value="Registrar" class="login-button">
-			#{/form}
+				<form  name="formLogin" action="@{Usuarios.Guardar()}" method = "post">
+		<table>
+			<tr>
+				<td><label>NOMBRES:</label></td>
+				<td><input name="UserName" type="text" id="user" class="login-input2"/></td>
+			</tr>
+
+			<tr>
+					<td><label>APELLIDOS:</label></td>
+					<td><input name="Apellido" type="text" id="apellido" class="login-input2" /><br></td>
+			</tr>
+			<tr>
+					<td><label>DIRECCIÓN:</label></td>
+					<td><input name="Direccion" type="text" id="direccion" class="login-input2" /><br></td>
+			</tr>
+			<tr>
+					<td><label>TELÉFONO:</label></td>
+					<td><input name="Telefono" type="text" id="telefono" class="login-input2" /><br></td>
+			</tr>
+			
+			<tr>
+					<td><label>CORREO ELECTRÓNICO:</label></td>
+					<td><input name="Correo" type="text" id="password" class="login-input2" /><br></td>
+			</tr> 
+			<tr>
+					<td><label>CONTRASEÑA:</label></td>
+					<td><input name="Password" type="password" id="password" class="login-input2" /><br></td>
+			</tr> 
+			
+
+			<tr>
+					<td colspan="2"><input type="submit" id="index" value="REGISTRAR" class="login-button"  /></td>
+	
+			</tr> 
+
+		</table>
+		</form>
 			 </div> 
 			<div id="saludo">
 				

@@ -1,0 +1,38 @@
+#{extends 'main.html' /}
+
+<meta charset="utf-8">
+<center><h3>MI PERFIL</h3>
+#{if usuarios}
+
+<table border="1">
+<tr>
+
+<th>Nombres</th>
+<th>Apellidos</th>
+<th>Direccion</th>
+<th>Telefono</th>
+<th>Correo Electronico</th>
+<th>Password</th>
+<th>Eliminar datos</th>
+<th>Actualizar datos</th>
+
+</tr>
+#{list items: usuarios,as:"usuario"}
+<tr>
+	<td>${usuario.UserName}</td>
+	<td>${usuario.Apellido}</td>
+	<td>${usuario.Direccion}</td>
+	<td>${usuario.Telefono}</td>
+	<td>${usuario.Correo}</td>
+	<td>${usuario.Password}</td>
+	<td><a href="@{Usuarios.Eliminar(usuario.id)}"><input type="button" id="Eliminar" name="Eliminar" value="Eliminar" style="color:red; height:30px; width:110px"  /></a></td>
+	<td><a href="@{Usuarios.Editar(usuario.id)}"><input type="button" id="Editar" name="Editar" value="Editar"style="color:red; height:30px; width:130px"/></a></td>
+</tr>
+#{/list}
+</table>
+#{/if}
+#{else}
+ <h1>no existe datos</h1>
+ #{/else}
+ </center>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

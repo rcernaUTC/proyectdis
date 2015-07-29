@@ -1,16 +1,291 @@
-<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+   		<script src="@{'/public/javascripts/jquery-1.6.4.min.js'}"
+		type="text/javascript" charset="${_response_encoding}"></script>
+    	
+    	<!--
+============================================
+	DISEÑO DEL INDEX 
+============================================
+-->
+    	
+    	<style type="text/css">
+    	
+    
+   			 body {
+					margin: 0;
+					padding: 0;
+					font-family: 'Terminal Dosis', Arial, sans-serif;
+					background: rgba(235, 235, 205, 0.7);
+				   }
+				   
+/*
+		=======================
+			Diseño Registro
+		=======================
+	 */
+				   
+				   
+			.registro {
+						text-align: left;
+						margin: 50px auto;
+						width: 310px;
+						padding: 30px 25px;
+						background: white;
+						border: 1px solid #c4c4c4;
+					   }
+		     label {
+						display: inline-block;
+						float: left;
+						margin-bottom: 35px;
+						font-size: 14px;
+						padding-left: 10px;
+						color: #244B68;
+					}
+	
+	 .login-input2 {
+						display: inline-block;
+						text-align: center;
+						width: 150px;
+						height: 30px;
+						margin-bottom: 18px;
+						padding-left: 10px;
+						font-size: 15px;
+						background: #fff;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+						float: right;
+					} 
+	.login-input2:focus {
+							border-color: #6e8095;
+							outline: none;
+						}
+	/*
+		=======================
+			Diseño Login
+		=======================
+	 */
+					.login {
+							margin: 20px auto;
+							width: 300px;
+							padding: 30px 25px;
+							background: white;
+							border: 1px solid #c4c4c4;
+							}
+			
+			h2.login-title {
+								
+								color: #CA3E39;
+								
+							}
+				.login-input {
+								width: 285px;
+								height: 50px;
+								margin-bottom: 28px;
+								padding-left: 10px;
+								font-size: 15px;
+								background: #fff;
+								border: 1px solid #ccc;
+								border-radius: 4px;
+						 	  }
+						 	  
+			     .login-input:focus {
+										border-color: #6e8095;
+										outline: none;
+									}
+			     .login-button {
+									width: 100px;
+									height: 50px;
+									padding: 0;
+									font-size: 15px;
+									color: #fff;
+									text-align: center;
+									background-color: rgb(202, 62, 57);
+									border: 0;
+									border-radius: 5px;
+									cursor: pointer;
+									outline: 0;
+									}
+			.login-button:hover {
+									background: #1dabb8;
+								}
 
-<html>
-    <head>
-        <title>#{get 'title' /}</title>
-        <meta charset="${_response_encoding}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
-        #{get 'moreStyles' /}
-        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-        #{get 'moreScripts' /}
-    </head>
-    <body>
+					.login-lost {
+									text-align: center;
+									margin-bottom: 0px;
+								}
+
+				  .login-lost a {
+									color: #666;
+									text-decoration: none;
+									font-size: 13px;
+								}				
+					#inicio input {
+									text-align: center;
+								}
+
+						header {
+									background-color: rgb(202, 62, 57);
+									width: 100%;
+									height: 93px;
+								}
+
+						
+					#logo img {
+								margin-top: 10px;
+								float: left;
+								width: 70px;
+								height: 70px;
+								margin-left: 20px;
+								border-radius: 80px;
+								}
+
+					#titulo {
+								margin-top: -5px;
+								color: #FCFCFC;
+								font-size: 20px;
+								text-align: center;
+								padding: 5px;
+								box-sizing: border-box;
+								width: 100%;
+								height: 70px;
+							}
+			
+				#contenedor {
+								width: 100%;
+								height: 550px;
+								background: rgba(235, 235, 205, 0.7);
+							}
+						
+				 
+					
+			
+
+					#saludo {
+								color: #244B68;
+								font-size: 24px;
+								text-align: center;
+							}
+					footer {
+								text-align: center;
+								font-size: 30px;
+								background-color: rgb(36, 75, 104);
+								color: #FCFCFC;
+								float: right;
+								width: 100%;
+								height: 70px;
+							}
+
+				footer img {
+								margin-top: -40px;
+							 	width: 60px;
+								height: auto;
+							}
+								
+						#inicio2 {
+									width: 60%;
+									float: left;
+									margin-left: 80px;
+									margin-top: -550px;
+								
+							   }
+							 		
+							
+						nav {
+								margin-top: 10px;
+								text-align: center;
+								padding: 10px;
+							}
+
+					nav a{
+							font-size: 16px;
+							display: inline-block;
+							color: #FCFCFC;
+							background-color: #244B68;
+							width: 150px;
+							height: 40px;
+							padding: 11px;
+							box-sizing: border-box;
+							text-decoration: none;
+							border-radius: 10px;
+						}
+
+			nav a:hover{
+							color: #fcfcfc;
+							background: #1dabb8;
+					   }
+		    #inicio {
+								background: rgba(235, 235, 205, 0.7);
+								width: 40%;
+								height: 550px;
+								float: right;
+							}
+							
+				#section1 {
+ 				 line-height:30px;
+   				 background-color:#eeeeee;
+   				 height:500px;
+    			 width:350px;
+    			 float:left;
+    			 padding:5px;
+						  }				
+		   #section2 {
+						line-height:30px;
+  						height:500px;
+    					width:480px;
+   						float:left;
+   						padding:5px;
+   						background-color:white;
+					}
+					
+		  #section3 {
+					background-color:blue;
+					height:490px;
+   					 width:567px;
+    				float:left;
+    				padding:10px;
+    			 	 
+					}
+					
+												     
+    	</style>
+    
+   </head>
+ <body>
+   
+   			<header>
+					<div id="logo">
+						<img src="public/images/utc.jpg">
+					</div>
+
+					<div id="titulo">
+						<h2>UNIVERSIDAD TÉCNICA DE COTOPAXI</h2>
+						<nav>
+  								<a href= /Pacientes>Pacientes</a>
+  								<a href= /principal>Anatomía</a>
+  								<a href= /Perfil>Usuarios</a>
+  								<a href= /Inicio>Salir</a>
+  								<a href= /Productos>Productos</a>
+  						</nav>	
+					</div>
+									
+			</header>
+			
+			<br><br><br><br>
+		
+			           
         #{doLayout /}
-    </body>
-</html>
+        
+ </body>
+  
+	<br>
+	<footer>
+		
+			<br> <img src="public/images/Facebook-icon.png"> <img
+			src="public/images/Twitter-icon.png" > <img
+			src="public/images/Youtube-2-icon.png"> <img
+			src="public/images/Googleplus-icon.png">	
+
+	</footer>
+	
+

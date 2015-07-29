@@ -4,6 +4,7 @@ import models.Doctor;
 import models.Registro;
 import models.Historial;
 import models.Paciente;
+
 import play.mvc.Controller;
 
 import java.util.*;
@@ -35,6 +36,14 @@ public class Registros extends Controller {
 		render(nombre, apellido, direccion, email, clave);
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 	public static void secion(String inpUsuario){
 		List<Doctor> doctores= null;
@@ -102,4 +111,19 @@ public class Registros extends Controller {
 		render(cedula_pac,nombre_pac, apellido_pac, direccion_pac, telefono_pac);
 
 	}
+	public static void Editar (Long code){
+		Registro persona= Registro.findById(code);
+		render(persona);
+	}
+	public static void Actualizar(long code, String Nombre, String Apellido,
+			String Direccion, String Email, String Clave){
+	Registro persona= Registro.findById(code);
+		persona.Nombre=Nombre;
+		persona.Apellido=Apellido;
+		persona.Direccion=Direccion;
+		persona.Email=Email;
+		persona.Clave=Clave;
+		persona.save();
+	}
+	
 }
