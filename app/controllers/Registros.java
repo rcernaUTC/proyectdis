@@ -51,8 +51,8 @@ public class Registros extends Controller {
 	}
 	public static void extraer() {
 	
-		List<Registros>registros=null;
-		registros=Registros.findAll();
+		List<Registro>registros=null;
+		registros=Registro.findAll();
 		
 		
 		

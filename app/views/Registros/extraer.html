@@ -275,9 +275,14 @@
             <td class="auto-style1"><strong>Direccion</strong></td>
             <td class="auto-style1"><strong>Email</strong></td>
         </tr>
-     
-        </tr>
-        	
+        #{list registros,as:'reg'}
+        <tr>
+        <td> ${reg.Nombre} <br></td>
+        <td> ${reg.Apellido} <br></td>
+        <td> ${reg.Direccion} <br></td>
+        <td> ${reg.Email} <br></td>
+        	 #{/list}
+        	 </tr>
         
     </table>
 			<hr>
