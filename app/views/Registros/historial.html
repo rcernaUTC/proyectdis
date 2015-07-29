@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Historial</title>
+
+<!--
+============================================
+	DISEÑO PAGINA HISTORIAL
+============================================
+-->
+<style type="text/css">
+
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: 'Terminal Dosis', Arial, sans-serif;
+		background:rgba(235,235,205,0.7);
+	}
+		
+	/*
+		=============================
+			DISEÑO INDEX
+		=============================
+	 */
+	
+	header{
+		background-color: rgb(202,62,57);
+		width: 100%;
+		height: 93px;
+	}
+
+	/* Botones de navegacion*/
+	.linea{
+		width: 100%;
+		height: 20px;
+		background-color: #244B68;
+	}
+
+	/*Logo*/
+	#logo img{
+		margin-top: 10px;
+		float: left;
+		width: 160px;
+		height: 160px;
+		margin-left: 20px;
+		border-radius: 80px;
+	}
+
+	#titulo{
+		margin-top: -5px;
+		color: #FCFCFC;
+		font-size: 25px;
+		text-align: center;
+		padding: 5px;
+		box-sizing: border-box;
+		width: 100%;
+		height: 70px;
+	}
+
+	#contenedor{
+		width: 100%;
+		height: 550px;
+		background:rgba(235,235,205,0.7);
+	}
+
+	footer{
+		text-align: center;
+		font-size: 24px;
+		background-color: rgb(36,75,104);
+		color: #FCFCFC;
+		float: right;
+		width: 100%;
+		height: 180px;
+	}
+
+	footer img{
+		margin-top: -40px;
+		width: 80px;
+		height: auto;
+	}
+
+	/*
+		=======================
+			Diseño historia
+		=======================
+	 */
+
+
+	.datos label{
+		text-align: left;
+		display: inline-block;
+		width: 20%;
+		height: 25px;
+		float: left;
+		margin-bottom: 29px;
+		font-size: 15px;
+		color: #244B68;
+	}
+
+	.observaciones label{
+		text-align: center;
+		display: inline-block;
+		float: center;
+		margin-bottom: 50px;
+		font-size: 15px;
+		color: #244B68;
+	}
+
+	.historial-input {
+		display: inline-block;
+		float: right;
+		text-align: center;
+		width: 350px;
+		height: 25px;
+		margin-bottom: 25px;
+		font-size: 15px;
+		background: #fff;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+	}
+
+	.historial-input:focus {
+		border-color: #6e8095;
+		outline: none;
+	}
+
+	/*
+		=======================
+			Diseño historial
+		=======================
+	 */
+
+	.historial {
+		text-align: center;
+		margin: 20px auto;
+		width: 900px;
+		height: 400px;
+		padding: 30px 25px;
+		background: white;
+		border: 1px solid #c4c4c4;
+	}
+
+	.datos{
+		float: left;
+		width: 50%;	
+	}
+
+	.observaciones{
+		float: right;
+		width: 50%;	
+	}
+	
+
+	textarea {
+		float: right;
+		height : 200px;
+		width: 410px;
+	}
+		
+	 textarea {
+	 	background : #fffffa;
+	 	border: 0;
+	 	margin-top: -40px;
+	 	margin-bottom: 10px;
+	 	padding: 10px;
+	 	
+	 	-webkit-box-shadow: 0 0 4px #252932;
+	 	-moz-box-shadow: 0 0 4px #252932;
+	 	-o-box-shadow: 0 0 4px #252932;
+	 	box-shadow: 0 0 4px #252932;
+	 	-webkit-border-radius: 2px;
+	 	-moz-border-radius: 2px;
+	 	-o-border-radius: 2px;
+	 	border-radius: 2px;
+	}
+		
+	textarea:focus {
+		background : #fff;
+		outline : none;
+		box-shadow : 0 0 4px #24607f;
+	}
+
+
+	h1.historial-title {
+		margin: -30px -25px 25px;
+		padding: 15px 25px;
+		line-height: 30px;
+		font-size: 25px;
+		font-weight: 300;
+		color: #CA3E39;
+		text-align: center;
+		background:rgba(235,235,205,0.7);
+	}
+
+
+	.botones {
+		float: right;
+		width: 100%;
+		height: 90px;
+		font-size: 20px;
+		color: #fff;
+		padding: 20px;
+		box-sizing: border-box;
+		text-align: center;
+		/*background:rgba(235,235,205,0.7);*/
+		border-radius: 5px;
+	}
+
+	.botones-button{
+		width: 130px;
+		height: 50px;
+		padding: 0;
+		font-size: 20px;
+		color: #fff;
+		text-align: center;
+		background-color: rgb(202,62,57);
+		border: 0;
+		border-radius: 5px;
+		cursor: pointer;
+		outline: 0;
+	}
+
+	.botones-button:hover{
+		background: #1dabb8;
+	}
+
+</style>
+<!--
+============================================
+	FIN DISEÑO DEL PAGE HISTORIAL
+============================================
+-->
+</head>
+
+<body>
+
+<!-- 
+=================================
+	Encabezado
+================================= 
+-->
+<header>
+	<div id="logo">
+		<img src="/public/images/utc.jpg">
+	</div>
+
+	<div id="titulo">
+		<h2>UNIVERSIDAD TÉCNICA DE COTOPAXI</h1>
+	</div>
+
+</header>
+
+<div class="linea"></div>
+
+
+<div id="contenedor">
+
+<!-- 
+	==============================================================
+		FORMULARIO DEL HISTORIAL
+	==============================================================
+ -->
+	<div id="historial">
+		<div class="historial">
+			<h1 class="historial-title">Pacientes</h1>
+
+<table style="width:100%;">
+        
+        <tr>
+            <td class="auto-style1"><strong>Cedula</strong></td>
+            <td class="auto-style1"><strong>Nombre</strong></td>
+            <td class="auto-style1"><strong>Apellido</strong></td>
+            <td class="auto-style1"><strong>Direccion</strong></td>
+            <td class="auto-style1"><strong>Telefono</strong></td>
+        </tr>
+		
+	</table>
+   
+
+		</div>	
+	</div>
+<!-- 
+=================================
+	Pie de Página
+================================= 
+-->
+<footer>
+	<h6>Derechos reservados 2015</h6>
+	<br>
+	<img src="/public/images/Facebook-icon.png">
+	<img src="/public/images/Twitter-icon.png">
+	<img src="/public/images/Youtube-2-icon.png">
+	<img src="/public/images/Googleplus-icon.png">
+
+</footer>
+
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
