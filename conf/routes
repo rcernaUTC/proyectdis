@@ -16,3 +16,4 @@ GET     /public/                                staticDir:public
 GET     /secion/                              Registros.secion
 GET 	/extraer/								Registros.extraer
 GET		/historial/								Registros.historial
+GET     /paciente/								Registros.paciente

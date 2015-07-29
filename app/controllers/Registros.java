@@ -45,28 +45,26 @@ public class Registros extends Controller {
 
 	// acediendo al metod en el caso la interfaz
 	public static void historial() {
-	
-		render();
+		List<Paciente>his=null;
+		his=Paciente.findAll();
+		render(his);
 
 	}
 	public static void extraer() {
-	
-		List<Registros>registros=null;
-		registros=Registros.findAll();
+		List<Doctor>doctors=null;
+		doctors=Doctor.findAll();
+		
+		List<Registro>registros=null;
+		registros=Registro.findAll();
 		
 		
 		
-		
-		render(registros);
+		render(registros,doctors);
 
 	}
 	
 
 
-	private static List<Registros> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	public static void main2(long code,String inpCedula, String inpNombres, String inpApellidos, String inpDireccion2, String inpTeléfono,String tfMensaje) {
 		String cedula2 = inpCedula;
 		String nombre2 = inpNombres;
