@@ -225,7 +225,29 @@
 	.botones-button:hover{
 		background: #1dabb8;
 	}
+nav {
+		margin-top: 20px;
+		text-align: center;
+		padding: 10px;
+	}
 
+	nav a{
+		font-size: 16px;
+		display: inline-block;
+		color: #FCFCFC;
+		background-color: #244B68;
+		width: 150px;
+		height: 40px;
+		padding: 11px;
+		box-sizing: border-box;
+		text-decoration: none;
+		border-radius: 10px;
+	}
+
+	nav a:hover{
+		color: #fcfcfc;
+		background: #1dabb8;
+	}
 </style>
 <!--
 ============================================
@@ -249,7 +271,14 @@
 	<div id="titulo">
 		<h2>UNIVERSIDAD TÉCNICA DE COTOPAXI</h1>
 	</div>
-
+<!--Menu de navegacion-->
+	<nav>
+		<a href="/secion/">Inicio</a>
+		<a href="/historial/">Historial</a>
+		<a href="/paciente/">Paciente</a>
+		<a href="/extraer/">Usuarios</a>
+		<a href="">Salir</a>
+	</nav>
 </header>
 
 <div class="linea"></div>
@@ -264,43 +293,39 @@
  -->
 	<div id="historial">
 		<div class="historial">
-			<h1 class="historial-title">Usuarios Registrados</h1>
+			<h1 class="historial-title">Registrar Paciente</h1>
 
+			<div class="datos">
+			#{form id:'itemForm3',action:@Registros.paciente(),
+			method:'POST',enctype:'multipart/form-data'}
+						
+				<label>Cedula</label> #{field 'cedulap'}
+				<input id="cedulap" type="text" name="${field.name}"  class="historial-input" placeholder="" autofocus required>
+										#{/field}
+				<label>Nombres </label>#{field 'nombrep'}
+				<input id="nombrep" type="text" name="${field.name}" class="historial-input" placeholder="" autofocus required>
+				#{/field}
+				<label>Apellidos </label>#{field 'apellidop'}
+				<input id="apellidop" type="text"  name="${field.name}" class="historial-input" placeholder="" autofocus required>
+#{/field}
+				<label>Dirección</label>#{field 'direccionp'}
+				<input id="direccionp" type="text"  name="${field.name}"class="historial-input" placeholder="" autofocus required>
+#{/field}
+				<label>Teléfono</label>#{field 'telefonop'}
+				<input id="telefonop" type="text" name="${field.name}" class="historial-input" placeholder="" autofocus required>
+			#{/field}
+			
+				
+			</div>
 
-    <table style="width:100%;">
-        
-        <tr>
-            <td class="auto-style1"><strong>Nombre</strong></td>
-            <td class="auto-style1"><strong>Apellido</strong></td>
-            <td class="auto-style1"><strong>Direccion</strong></td>
-            <td class="auto-style1"><strong>Email</strong></td>
-        </tr>
-<<<<<<< HEAD
-        #{list registros,as:'reg'}
-        <tr>
-        <td> ${reg.Nombre} <br></td>
-        <td> ${reg.Apellido} <br></td>
-        <td> ${reg.Direccion} <br></td>
-        <td> ${reg.Email} <br></td>
-        	 #{/list}
-        	 </tr>
-=======
-       
-	        <tr>
-	         #{list registros,as:'reg'}
-           <td>  ${reg.Nombre}  <br></td>
-            <td>  ${reg.Apellido}  <br></td>
-            <td>  ${reg.Direccion}  <br></td>
-           <td>  ${reg.Email}  <br></td>
-           #{/list}
-        </tr>
-        	
->>>>>>> origin/master
-        
-    </table>
-			<hr>
+			<input id="btnRegistrar" type="submit" value="Guardar" >
+								
+			
+			#{/form}
 		</div>
 		</div>		
+	</div>
+		
 	</div>
 <!-- 
 =================================
@@ -319,12 +344,3 @@
 
 </body>
 </html>
-	
-	
-	
-	
-	
-	
-	
-
-	
