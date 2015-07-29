@@ -275,6 +275,15 @@
             <td class="auto-style1"><strong>Direccion</strong></td>
             <td class="auto-style1"><strong>Telefono</strong></td>
         </tr>
+        
+        #{list his,as:'hi'}
+        <td> ${hi.cedula_pac}</td>
+        <td> ${hi.nombre_pac}</td>
+        <td> ${hi.direccion_pac}</td>
+        <td> ${hi.direccion_pac}</td>
+        <td> ${hi.telefono_pac}</td>
+        <tr>
+        #{/list}
 		
 	</table>
    

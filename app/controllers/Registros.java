@@ -51,20 +51,13 @@ public class Registros extends Controller {
 
 	}
 	public static void extraer() {
-<<<<<<< HEAD
+
 	
 		List<Registro>registros=null;
 		registros=Registro.findAll();
-=======
+
 		List<Doctor>doctors=null;
-		doctors=Doctor.findAll();
->>>>>>> origin/master
-		
-		List<Registro>registros=null;
-		registros=Registro.findAll();
-		
-		
-		
+		doctors=Doctor.findAll();	
 		render(registros,doctors);
 
 	}
