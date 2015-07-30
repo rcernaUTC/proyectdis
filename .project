@@ -15,5 +15,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.playframework.playclipse.playNature</nature>
 	</natures>
-	
+	<linkedResources>
+		<link>
+			<name>CRUD</name>
+			<type>2</type>
+			<location>C:/play/modules/crud/app</location>
+		</link>
+	</linkedResources>
 </projectDescription>

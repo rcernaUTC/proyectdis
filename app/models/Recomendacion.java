@@ -6,15 +6,21 @@ import play.db.jpa.Model;
 
 @Entity
 public class Recomendacion extends Model{
-    private int codigo_rec;
-    private int codigo_enf;
-    private int codigo_obs;
-    private int descripcion_rec;
+    
+	public int codigo_rec;
+	public String tipo_rec;
+    public String descripcion_rec;
+    public String fecha_rec;
+    
+    
 
     public void mostrarDatos(){
     }
 
     public void enviarDatos(){
     }
+    public String toString()  {
+        return "nombre: (" + codigo_rec + tipo_rec+descripcion_rec+fecha_rec+")";
+}
 
 }
