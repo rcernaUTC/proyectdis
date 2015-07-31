@@ -36,4 +36,23 @@
  <h1>no existe datos</h1>
  #{/else}
  </center>
+<br><br>
+ <div>
+ 
+ 	#{form id:'itemForm4',action:@Busquedas.busquedapac(),
+			method:'POST',enctype:'multipart/form-data'}
+						
+				
+				<label>Buscar Paciente: </label>#{field 'Cedula'}
+				<input id="Cedula" type="text" name="${field.name}" class="historial-input" placeholder="ingrese cedula paciente " autofocus required>
+			#{/field}
+			
+				
+			</div>
+
+			<input id="btnRegistrar" type="submit" value="Buscar Paciente" >
+								
+	 
+			#{/form}
  <br><br>
+ </div>

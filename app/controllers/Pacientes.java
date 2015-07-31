@@ -12,8 +12,8 @@ public class Pacientes extends Controller{
 		List<Paciente> pacientes=Paciente.findAll();
 		render(pacientes);
 	}
-	public static void Guardar(String UserName,String  Apellido,String  Direccion,int Telefono){
-		Paciente persona = new Paciente(UserName,Apellido,Direccion,Telefono);
+	public static void Guardar(String Cedula,String UserName,String  Apellido,String  Direccion,int Telefono){
+		Paciente persona = new Paciente(Cedula,UserName,Apellido,Direccion,Telefono);
 		persona.save();
 		Pacientes inicio=new Pacientes();
 		inicio.index();

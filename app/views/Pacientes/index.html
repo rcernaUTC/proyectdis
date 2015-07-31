@@ -9,6 +9,7 @@
 <table border="1">
 <tr>
 
+<th>Cedula</th>
 <th>Nombres</th>
 <th>Apellidos</th>
 <th>Direccion</th>
@@ -19,6 +20,7 @@
 </tr>
 #{list items: pacientes,as:"paciente"}
 <tr>
+	<td>${paciente.Cedula}</td>
 	<td>${paciente.UserName}</td>
 	<td>${paciente.Apellido}</td>
 	<td>${paciente.Direccion}</td>
