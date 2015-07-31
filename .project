@@ -24,12 +24,12 @@
 		<link>
 			<name>conf/crud</name>
 			<type>2</type>
-			<location>c:/play/modules/crud/conf</location>
+			<location>C:/play/modules/crud/conf</location>
 		</link>
 		<link>
 			<name>public/crud</name>
 			<type>2</type>
-			<location>c:/play/modules/crud/public</location>
+			<location>C:/play/modules/crud/public</location>
 		</link>
 	</linkedResources>
 </projectDescription>

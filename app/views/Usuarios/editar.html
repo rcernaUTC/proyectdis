@@ -1,4 +1,4 @@
-#{extends 'main.html' /}
+#{extends 'main2.html' /}
 
 <meta charset="utf-8">
 
@@ -19,30 +19,43 @@
 		
 <div id="inicio2">
 	<div class="registro"> 
-	<h1 class="login-title">EDITAR SUS DATOS</h1>
+	<center><h2 class="login-title" >EDITAR SUS DATOS</h2></center>
+	
 		
-		<form  name="formLogin" action="@{Usuarios.Guardar()}" method = "post">
-		<center><table>
-			<tr>
-				<td><label>NOMBRES:</label></td>
-				<td><input name="UserName" type="text" id="user" class="login-input2"/></td>
-			</tr>
+		<form name="formLogin" action="@{Usuarios.Actualizar()}" method = "post">
+<input type ="hidden" name="id" value="${persona.id}">
+<center><table>
+<tr>
+	<td><label>NOMBRES:</label></td>
+	<td><input name="UserName" type="text" id="userName"  value="${persona.UserName}" class="login-input2"/></td>
+</tr>
 
-			
-					<td><label>CORREO ELECTRÓNICO:</label></td>
-					<td><input name="Correo" type="text" id="password" class="login-input2" /><br></td>
-			</tr> 
-			<tr>
-					<td><label>CONTRASEÑA:</label></td>
-					<td><input name="Password" type="password" id="password" class="login-input2" /><br></td>
-			</tr> 
-			<tr>
-					<td colspan="2"><input type="submit" id="index" value="ACTUALIZAR" class="login-button"  /></td>
-			</tr> 
+<tr>
+	<td><label>APELLIDOS:</label></td>
+	<td><input name="Apellido" type="text" id="Apellido" value="${persona.Apellido}" class="login-input2"/><br></td>
+</tr>
+<tr>
+	<td><label>DIRECCIÓN:</label></td>
+	<td><input name="Direccion" type="text" id="Direccion"value="${persona.Direccion}" class="login-input2"/><br></td>
+</tr>
+<tr>
+	<td><label>TELÉFONO:</label></td>
+	<td><input name="Telefono" type="text" id="Telefono" value="${persona.Telefono}" class="login-input2"/><br></td>
+</tr>
+<tr>
+	<td><label>E_MAIL:</label></td>
+	<td><input name="Correo" type="text" id="Correo" value="${persona.Correo}" class="login-input2"/><br></td>
+</tr>
+<tr>
+	<td><label>CONTRASEÑA:</label></td>
+	<td><input name="Password" type="password" id="Password" value="" class="login-input2" /><br></td>
+</tr> 
 
-		</table>
-		</center>
-		</form>
+<tr>
+	<td colspan="2"><input type="submit" id="registro" value="ACTUALIZAR" class="login-button" /></td>
+</tr> 
+</table>	</center>
+</form>
  	</div> 
  
  			

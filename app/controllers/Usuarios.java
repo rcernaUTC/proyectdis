@@ -23,7 +23,7 @@ public class Usuarios extends Controller {
 		render(persona);
 	}
 		
-	public static void Actualizar( Long id,String UserName,String  Apellido,String  Direccion,int Telefono,String  Correo,String  Password ){
+	public static void Actualizar( Long id,String UserName,String  Apellido,String  Direccion,int Telefono,String Correo,String  Password ){
 		Usuario persona= Usuario.findById(id);
 		persona.UserName=UserName;
 		persona.Apellido=Apellido;
@@ -40,6 +40,7 @@ public class Usuarios extends Controller {
 		persona.delete();
 		index();
 	}
+	
 	
 	
 	

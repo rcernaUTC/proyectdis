@@ -31,3 +31,4 @@ GET     /chat/                                    Application.chat
 >>>>>>> origin/master
 # enlase crud
 *     /admin           module:crud
+
