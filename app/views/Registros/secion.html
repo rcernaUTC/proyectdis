@@ -8,6 +8,16 @@
   <script type="text/javascript" src="/public/thumbelina/thumbelina.js"></script>
 
       <!-- Create sliders. -->
+       <script>
+function CargarDatos(variables) {
+
+	document.getElementById("imagen").src = variables.src;
+	document.getElementById("descripcion").value= variables.name;
+	document.getElementById("descripcion1").value= variables.alt;
+
+}
+</script>
+
         <script type="text/javascript">
             $(function(){
             
@@ -336,20 +346,24 @@
 	<div id="parte1">
 	<br>
 		
-		<div id="discapacitados">Imagenes</div>
+		<div id="discapacitados">PARTES DEL CUERPO HUMANO</div>
 		<br>
 		<div  id="slider3">
-            <div class="thumbelina-but vert top">&#708;</div>
+		
+           <center> <div class="thumbelina-but vert top">&#708;</div>
             <ul>
                 
-              <li><img src="/public/slider/image1.jpg"></li>
-                <li><img src="/public/slider/image2.jpg"></li>
-                <li><img src="/public/slider/image3.jpg"></li>
-                <li><img src="/public/slider/image4.jpg"></li>
-                <li><img src="/public/slider/image5.jpg"></li>
-                <li><img src="/public/slider/image6.jpg"></li>
-            </ul>
-            <div class="thumbelina-but vert bottom">&#709;</div>
+           <li><img name="Dolor del tobillo" alt="Dolor de talon" src="/public/images/1c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li>
+           <li><img name="Dolor del hombro" alt="Calambre del hombro"src="/public/images/2c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li>
+           <li><img name="Dolor del muslo"alt="Hichazon del muslo" src="/public/images/3c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li>
+           <li><img name="Dolor de garganta" alt="Flema" src="/public/images/5c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li>
+           <li><img name="Dolor del oìdo" alt="Sordera " src="/public/images/6c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li>
+           <li><img name="Dolor del ante brazo" alt="Calambre del antebrazo"src="/public/images/7c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li>   
+           <li><img name="Lagrimeo exesivo" alt="Cegera" src="/public/images/8c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li>
+           <li><img name="Dolor de cabeza" alt="Mareos" src="/public/images/9c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li>
+           <li><img name="Calambre de los dedos" alt="Cortes de los dedos" src="/public/images/10c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li>
+           <li><img name="Dolor de los dedos del pie" src="/public/images/11c.png" width="100px" height="100px" onclick="CargarDatos(this);"></li></ul>
+           <div class="thumbelina-but vert bottom">&#709;</div></center>
         </div>
 	
 	</div>
@@ -365,14 +379,13 @@
 	<div id="parte2">
 		<br>
 		<div id="bienvenida">
-			Paciente
+			PARTE DEL CUERPO HUMANO
 		</div>
 
 		<br>
 		<!--Imagen Bienvenida-->
 		<div id="imgBienvenida">
-			<img src="/public/images/hol.jpg">
-			
+			<center><img id="imagen" name="img"  src="/public/images/11c.png"width="80px" height="80px" ></center>
 		</div>
 		<!--Seccion 2 Sintomas-->
 		<div id="sintomas">
@@ -381,17 +394,15 @@
 				<tr>
 					<td>Síntomas</td>
 					<td>Recomendaciones</td>
-					<td>Medicinas</td>				
+								
 				</tr>
 
 				<tr>
-					<!--<td><input type="text" id="inpSintomas" value=""></td>
-					<td><input type="text" id="inpRecomendaciones" value=""></td>
-					<td><input type="text" id="inpMedicinas" value=""></td> -->
+					
 
 					<td><textarea cols="24" rows="5"></textarea></td>
 					<td><textarea cols="24" rows="5"></textarea></td>
-					<td><textarea cols="24" rows="5"></textarea></td>
+					
 				</tr>
 			</table>			
 		</div>
@@ -400,50 +411,40 @@
 	<!--Seccion 3 Datos-->
 	<div id="parte3">
 		<br>
-		<div id="bienvenida">
-			Datos
-		</div>
+	<center>	<div id="bienvenida" >
+			SÌNTOMAS
+			<br>
+		</div></center>
 		
 		<!--Preguntas-->
 		<div id="sintomas2">
 			<br>
 			<table border="1">
 				<tr>
-					<td>Síntomas</td>
-					<td>Recomendaciones</td>
-					<td>Medicinas</td>				
+					<td>Texto</td>
+					<td>Imagenes</td>
+							
 				</tr>
 
 				<tr>
-					<td><input type="text" id="inpSintomas" value=""></td>
+					<td><input type="text" id="descripcion"value=""></td>
 					<td><input type="text" id="inpRecomendaciones" value=""></td>
-					<td><input type="text" id="inpMedicinas" value=""></td>
-				</tr>
-
-				<tr>
-					<td><input type="text" id="inpSintomas" value=""></td>
-					<td><input type="text" id="inpRecomendaciones" value=""></td>
-					<td><input type="text" id="inpMedicinas" value=""></td>
-				</tr>
-
-				<tr>
-					<td><input type="text" id="inpSintomas" value=""></td>
-					<td><input type="text" id="inpRecomendaciones" value=""></td>
-					<td><input type="text" id="inpMedicinas" value=""></td>
-				</tr>
-
-				<tr>
-					<td><input type="text" id="inpSintomas" value=""></td>
-					<td><input type="text" id="inpRecomendaciones" value=""></td>
-					<td><input type="text" id="inpMedicinas" value=""></td>
-				</tr>
-
-				<tr>
-					<td><input type="text" id="inpSintomas" value=""></td>
-					<td><input type="text" id="inpRecomendaciones" value=""></td>
-					<td><input type="text" id="inpMedicinas" value=""></td>
 				
 				</tr>
+
+				<tr>
+					<td><input type="text" id="descripcion1" value=""></td>
+					<td><input type="text" id="inpRecomendaciones" value=""></td>
+					
+				</tr>
+
+				<tr>
+					<td><input type="text" id="inpSintomas" value=""></td>
+					<td><input type="text" id="inpRecomendaciones" value=""></td>
+				
+				</tr>
+
+			
 			</table>			
 		</div>		
 	</div>	
