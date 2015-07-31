@@ -26,6 +26,9 @@ GET     /paciente/								Registros.paciente
 <<<<<<< HEAD
 * 		 /Perfil                				Usuarios.index	
 *        /Inicio							    Application.index
+ *     /Pacientes							    Pacientes.index
+ *     /Historial							    Registros.historial
+ *     /Nuevo								    Pacientes.Nuevo
 =======
 GET     /chat/                                    Application.chat
 >>>>>>> origin/master

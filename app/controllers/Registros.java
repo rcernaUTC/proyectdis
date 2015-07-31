@@ -82,8 +82,7 @@ public class Registros extends Controller {
 		String mensaje = tfMensaje;
 
 		
-		 Historial historiales= new Historial (1,cedula2, nombre2, apellido2, direccion2, telefono, mensaje);
-		 historiales.save();
+		 
 		
 		// Registro historiales= new Registro(1, cedula, nombres, apellidos,
 		// direccion2,telefono, mensaje);
@@ -99,17 +98,8 @@ public class Registros extends Controller {
 		String apellido_pac  = apellidop;
 		String direccion_pac= direccionp;
 		String telefono_pac = telefonop;
-
-			
-		 Paciente paciente = new Paciente (1,cedula_pac, nombre_pac, apellido_pac, direccion_pac,telefono_pac);
-		 paciente.save();
 		
-		// Registro historiales= new Registro(1, cedula, nombres, apellidos,
-		// direccion2,telefono, mensaje);
-		// Registro.save();
-
-		render(cedula_pac,nombre_pac, apellido_pac, direccion_pac, telefono_pac);
-
+		
 	}
 	public static void Editar (Long code){
 		Registro persona= Registro.findById(code);

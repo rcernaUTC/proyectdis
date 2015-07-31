@@ -1,0 +1,58 @@
+#{extends 'main2.html' /}
+
+<meta charset="utf-8">
+
+
+<body>
+<div id="contenedor">
+
+		<!-- 
+	==============================================================
+		FORMULARIO INICIO
+	==============================================================
+ -->
+		<div id="inicio">
+			
+		</div>
+		
+		<form  name="formLogin" action="@{Pacientes.Guardar()}" method = "post">
+		<center><table border="1">
+			<tr>
+				<td colspan="2"><center><h2 class="login-title">Paciente</h2></center></td>
+	
+			</tr> 
+			<tr>
+				<td><label>NOMBRES:</label></td>
+				<td><input name="UserName" type="text" id="UserName" class="login-input2"/></td>
+			</tr>
+
+			<tr>
+					<td><label>APELLIDOS:</label></td>
+					<td><input name="Apellido" type="text" id="Apellido" class="login-input2" /><br></td>
+			</tr>
+			<tr>
+					<td><label>DIRECCIÓN:</label></td>
+					<td><input name="Direccion" type="text" id="Apellido" class="login-input2" /><br></td>
+			</tr>
+			
+			
+			<tr>
+					<td><label>TELÉFONO:</label></td>
+					<td><input name="Telefono" type="text" id="Telefono" class="login-input2" /><br></td>
+			</tr>
+			
+								 
+			<tr>
+					<td colspan="2"><center><input type="submit" id="registro" value="GUARDAR" class="login-button"  /></center></td>
+	
+			</tr> 
+
+		</table></center>
+		</form>
+		
+
+ </div>				
+
+
+</body>
+

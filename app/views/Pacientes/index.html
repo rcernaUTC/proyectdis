@@ -1,0 +1,37 @@
+#{extends 'main2.html' /}
+
+<meta charset="utf-8">
+<center><nav><a href="/Nuevo">Nuevo</a></nav><center>
+
+<center><h2 class="login-title" >DATOS PACIENTE</h2>
+#{if pacientes}
+
+<table border="1">
+<tr>
+
+<th>Nombres</th>
+<th>Apellidos</th>
+<th>Direccion</th>
+<th>Telefono</th>
+<th>Eliminar datos</th>
+<th>Historial</th>
+
+</tr>
+#{list items: pacientes,as:"paciente"}
+<tr>
+	<td>${paciente.UserName}</td>
+	<td>${paciente.Apellido}</td>
+	<td>${paciente.Direccion}</td>
+	<td>${paciente.Telefono}</td>
+	
+	<td><a href="@{Pacientes.Eliminar(paciente.id)}"><input type="button" id="Eliminar" name="Eliminar" value="Eliminar"style="color:red; height:30px; width:130px"/></a></td>
+	<td><a href="/Historial"><input type="button" id="Eliminar" name="Eliminar" value="Historial" style="color:red; height:30px; width:100px"/></a></td>
+</tr>
+#{/list}
+</table>
+#{/if}
+#{else}
+ <h1>no existe datos</h1>
+ #{/else}
+ </center>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

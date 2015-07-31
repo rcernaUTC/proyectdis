@@ -12,7 +12,7 @@ public class Observacion extends Model{
     public String fecha_obs;
     
     public String toString(){
-    	return "CANTIDAD:("+cantidad_obs+")"+"DESCRIPCIÓN:("+descripcion_obs+")"+"FEHA DE LA OBSERVACIÓN:("+fecha_obs+")";
+    	return "NUMEROS DE OBSERVACIONES:("+cantidad_obs+")"+"DESCRIPCIÓN:("+descripcion_obs+")"+"FEHA DE LA OBSERVACIÓN:("+fecha_obs+")";
     }
 
     public void enviarDatos(){
