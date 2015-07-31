@@ -6,10 +6,14 @@ import play.db.jpa.Model;
 
 @Entity
 public class Observacion extends Model{
-    private int codigo_obs;
-    private int codigo_hist;
-    private int codigo_cuerpo;
-    private String sintomas_obs;
+   
+    public String cantidad_obs;
+    public String descripcion_obs;
+    public String fecha_obs;
+    
+    public String toString(){
+    	return "CANTIDAD:("+cantidad_obs+")"+"DESCRIPCIÓN:("+descripcion_obs+")"+"FEHA DE LA OBSERVACIÓN:("+fecha_obs+")";
+    }
 
     public void enviarDatos(){
     }
