@@ -7,6 +7,55 @@
 
 <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}"
 	type="text/javascript" charset="${_response_encoding}"></script>
+	<script>
+    function soloLetras(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
+<script>
+function solonumeros(e) {
+    key = e.keyCode || e.which;
+    tecla = String.fromCharCode(key).toLowerCase();
+    letras = " 0123456789";
+    especiales = [8, 37, 39, 46];
+
+    tecla_especial = false
+    for(var i in especiales) {
+        if(key == especiales[i]) {
+            tecla_especial = true;
+            break;
+        }
+    }
+
+    if(letras.indexOf(tecla) == -1 && !tecla_especial)
+        return false;
+}
+
+function limpia() {
+    var val = document.getElementById("miInput").value;
+    var tam = val.length;
+    for(i = 0; i < tam; i++) {
+        if(!isNaN(val[i]))
+            document.getElementById("miInput").value = '';
+    }
+}
+</script>
+	
 
 <!--
 ============================================
@@ -288,29 +337,29 @@ footer img {
 		<table>
 			<tr>
 				<td><label>NOMBRES:</label></td>
-				<td><input name="UserName" type="text" id="user" class="login-input2"/></td>
+				<td><input name="UserName" type="text" id="user" class="login-input2" placeholder="Escriba su nombre" required="Ingrese solo letras" onkeypress="return soloLetras(event)"/></td>
 			</tr>
 
 			<tr>
 					<td><label>APELLIDOS:</label></td>
-					<td><input name="Apellido" type="text" id="apellido" class="login-input2" /><br></td>
+					<td><input name="Apellido" type="text" id="apellido" class="login-input2" placeholder="Escriba su apellido" required="Ingrese solo letras" onkeypress="return soloLetras(event)"/><br></td>
 			</tr>
 			<tr>
-					<td><label>DIRECCIÓN:</label></td>
-					<td><input name="Direccion" type="text" id="direccion" class="login-input2" /><br></td>
+					<td><label>DIRECCIÒN:</label></td>
+					<td><input name="Direccion" type="text" id="direccion" class="login-input2" placeholder="Escriba su direccion" required="Ingrese solo letras" onkeypress="return soloLetras(event)"/><br></td>
 			</tr>
 			<tr>
-					<td><label>TELÉFONO:</label></td>
-					<td><input name="Telefono" type="text" id="telefono" class="login-input2" /><br></td>
+					<td><label>TELÈFONO:</label></td>
+					<td><input name="Telefono" type="text" id="telefono" class="login-input2" placeholder="Escriba su telefono" required="Ingrese solo letras" onkeypress="return solonumeros(event)"/><br></td> 
 			</tr>
 			
 			<tr>
 					<td><label>CORREO ELECTRÓNICO:</label></td>
-					<td><input name="Correo" type="text" id="password" class="login-input2" /><br></td>
+					<td><input name="Correo" type="email" id="password" class="login-input2"placeholder="Ingrese un E_mail" required="falta @" /><br></td>
 			</tr> 
 			<tr>
 					<td><label>CONTRASEÑA:</label></td>
-					<td><input name="Password" type="password" id="password" class="login-input2" /><br></td>
+					<td><input name="Contrasenia" type="password" id="contrasenia" class="login-input2" placeholder="Escriba su contraseña" required="Ingrese solo letras" /><br></td>
 			</tr> 
 			
 
